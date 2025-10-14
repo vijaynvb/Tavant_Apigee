@@ -1,0 +1,54 @@
+1. microservices
+2. http
+3. rest 
+4. OAS -> Swagger -> 
+    documenting rest api's 
+    API -> interface
+        1. Design first -> 
+            1. service developer -> buid rest api 
+            2. front end application dev -> frontend app
+        2. code first approach -> 
+            1. service developer -> generate the swagger document 
+    OAS -> upload in apigee -> crete proxy with conditional flows
+
+end developer[angular] -> proxy[34.107.140.123.nip.io/swagger-petstore1/pet/findByStatus?status=sold] -> target end point [https://petstore.swagger.io/v2/pet/findByStatus?status=sold]
+                         1. enable security
+                         2. content negotiation
+                         3. cors 
+                         4. tsl 
+                         5. api managements -> [subscriptions-> quota 1s -> 3 request, spike arest]
+                         6. url rewrites
+                            1. headers -> query params 
+                            2. oauth [encryption] -> basicauth [encoding]
+                            3. rest -> soap conversion 
+
+postman -> pagecount -> headers 
+proxy -> headers -> queryparmas 
+    1. AssignMessage -> request [url, headers, method, httpvesion, body] -> 
+                        create new request object 
+                        modify the request object -> 
+backend -> displaying the request in its body
+
+
+Todays Topics:
+
+Trafic Management:
+    1. Quota Policy
+        1. Rate Limit: 
+            1. 1 minute -> 5 request
+            2. application specific rate liniting: [mobile, webapp]
+            3. weightage configuration -> 
+                1. verb -> get -> weightage 1        -> js policy for setting the weightage -> messageWeight
+                           post -> weightage 2 
+                2. allow only 4 request in a minute 
+    2. Spike Arrest
+
+eval gcp
+request -> lb -> node 1 -> | count = 3
+                 node 2 -> |
+
+Distributed = ture 
+Synchronous = true
+
+mobile ->       | decide on the app and alow access
+webapp ->       |   3 req in a min for ever app

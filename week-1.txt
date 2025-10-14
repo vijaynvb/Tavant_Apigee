@@ -1,0 +1,152 @@
+
+
+process
+
+application -> solving a problem using process 
+
+enterprise application -> organization or domain [education, banking, heathcare ....]
+
+banking: credit and debit from a account 
+    1. web portals 
+        1. end user
+        2. org based
+    2. mobile app's
+    3. atm 
+    4. iot
+        1. pos 
+        2. watch
+        3. ring 
+
+API [Functions] and REST API [Rest principles]
+
+HRM HMS 
+    1. user management []
+        1. signup, login profile management 
+        2. role management 
+        3. MFA
+        4. AD integration 
+        5. sso
+        6. saml
+        7. Social login 
+        8. oauth integration 
+
+jar -> java classes -> jvm 
+war -> java classess + web application [html,css, js, resources]
+ear -> 
+    jar
+    war
+
+Microservice: it is a architectural style implementing enterprise solutions 
+    Tools: cncf landscape 
+    SOA: 
+        1. interoperability -> service1 c [int 32] [xml] [SOAP] [xml] service2 java [int 64]
+        2. firewall traversal -> port[http-> 80, 443]
+            0-1024 -> standard ports -> os managed ports 
+            25 smtp, 22 ssh, 21 ftp 
+    Microservice
+        1. speed of delivery
+        2. scalability -> 100 users -> 100000 users -> concurenty
+            monolotich -> 
+            Microservice -> horizontal scaling -> k8s, openshift, cludformation ...
+        3. invoation/experimenting 
+        4. cloud devops -> deployment -> commit code in git scm -> deploy in production 
+    principles:
+        1. modularity
+        2. autonomus -> not to use one for multiple services
+        3. hide implemnetioan -> any thech polygot tech 
+        4. automation -> cicd 
+        5. stateless -> no server side session management use only client side session management -> tokens 
+        6. obeservability -> centralized logging, monitoring [actuator, service mesh], corelation id 
+
+Honeycomb:
+
+ios osi -> 
+
+Appliction [http 80, https 443] -> 
+Transport [tcp, udp] -> identify your service [port] -> os -> 
+Network [ip] -> n ip addres 
+Datalink [packet->[group of meaning full data ]] [systemidentifcation [ipv4 [32], ipv6[128]] , data]
+Physical [0,1]
+    NIC [mac] -> wire wireless fiberoptic
+
+Load Balancers: 
+    1. mac -> Dmzone
+    2. ip -> network level load balancing 
+    3. port -> k8s
+    4. /ems, /hrm, /hcms application level nginx
+
+Database -> 
+    transactions
+    sp -> ACID
+        insert into employee service 1
+       
+        inter into address service 2
+       
+        insert into salary service 3
+
+firebase, couchdb -> rest api's
+    1. replication 
+
+sync and async -> service communication -> saga patterns 
+    1. service 1 -> service 2 -> service 3
+        payment usecase 
+    2. service 1 -> service 2
+                 -> service 3
+        after payment -> 
+            1. sms service
+            2. email service
+            3. shipping service 
+            4. inventory update 
+
+request Headers -> Accept -> apllication/json, xml
+response Headers  -> content-type apllication/json
+                  -> cache: 
+                  -> ipaddress
+
+
+angular [cache] -> browser [cache] -> isp[cache servers] -> redis [cache]-> firewall -> api gateway [cache] -> redis[cache]   -> micorservice [cache] -> db [cache] 
+    sqllite []
+
+HTTP establish communication between two application [c process /s process]
+    c -> [makes the request] browser, application http client
+    s -> [Listens, respond for requert] apache [static server], apache tomcat [dynamic server], iis, weblogic, web spechere.... http server
+    web solutions:
+        1. web site: static data [.html,js,css, images] -> get request
+        2. web application: tomcat -> jvm -> html -> client [.jsp,.php,.aspx] -> get, post
+        3. web services: -> xml or json 
+            1. soap -> xml -> post -> wsdl -> metadata -> CRUD
+            2. rest service -> xml, json -> get post put delete -> CRUD
+
+HTTP -> w3c www consotium -> 1.1 
+    1. Http request [5 url, http version, headers, body, method] response [4 status code, headers, body, version] pipeline -> 
+
+aws: 
+    1. appliction [token] -> api gateway -> lamdafunctions[decoding basic auth] -> accessing endpoint 
+
+
+
+sheme://ip:port/pathtoresource/resource/pathvariables?queryparams
+
+http://localhost:80/ems/api/v1/employees/{id}?filter=age:18&
+https://localhost:80/ems/api/v1/employees/{id}?filter=age:18&
+
+ 
+egress
+
+java spring micor service->
+1. expose -> ingres
+2. weather.com rest api -> egress
+
+hrmanage -> [ilb]   ->
+ola ->      ELB[GCP]     ->  apigee -> [ilb] cloudfuntion -> db
+                1. internal
+                2. external
+    vpc -> 
+        subnet -> 172.1.1.120
+        internet
+
+
+Client [postman] -> proxy [https://34.107.140.123.nip.io/hello-world]               -> backend [https://mocktarget.apigee.net/user]
+                         https://34.107.140.123.nip.io/today?location=bangalore        https://weather.com/today?location=bangalore
+                                            
+
