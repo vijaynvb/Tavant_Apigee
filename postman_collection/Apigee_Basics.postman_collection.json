@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "4731a0d4-4cb5-4d05-819f-53c214411d09",
+		"name": "Apigee_Basics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8392871",
+		"_collection_link": "https://apigee-developer-team.postman.co/workspace/Apigee_Tavant_Training~2d06875b-2282-4027-9b7c-4f8afd4da856/collection/8392871-4731a0d4-4cb5-4d05-819f-53c214411d09?action=share&source=collection_link&creator=8392871"
+	},
+	"item": [
+		{
+			"name": "pet-store",
+			"item": [
+				{
+					"name": "getinventory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apigee_host}}/swagger-petstore1/store/inventory",
+							"host": [
+								"{{apigee_host}}"
+							],
+							"path": [
+								"swagger-petstore1",
+								"store",
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findpetbystatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apigee_host}}/swagger-petstore1/pet/findByStatus?status=available",
+							"host": [
+								"{{apigee_host}}"
+							],
+							"path": [
+								"swagger-petstore1",
+								"pet",
+								"findByStatus"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "available"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "exercises",
+			"item": [
+				{
+					"name": "01headertoquery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apigee_host}}/01headertoquery",
+							"host": [
+								"{{apigee_host}}"
+							],
+							"path": [
+								"01headertoquery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02QM3persec",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apigee_host}}/02quotamanagement/get",
+							"host": [
+								"{{apigee_host}}"
+							],
+							"path": [
+								"02quotamanagement",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03QMAppSpecificLimits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apigee_host}}/03mgappspecificlimits/get?appid=mobileapp",
+							"host": [
+								"{{apigee_host}}"
+							],
+							"path": [
+								"03mgappspecificlimits",
+								"get"
+							],
+							"query": [
+								{
+									"key": "appid",
+									"value": "mobileapp"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04QMOnVerbWeightage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{apigee_host}}/04qmweightage/post",
+							"host": [
+								"{{apigee_host}}"
+							],
+							"path": [
+								"04qmweightage",
+								"post"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Basics",
+			"item": [
+				{
+					"name": "hello-world",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apigee_host}}/hello-world",
+							"host": [
+								"{{apigee_host}}"
+							],
+							"path": [
+								"hello-world"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "petstoreinventory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apigee_host}}/swagger-petstore/store/inventory",
+							"host": [
+								"{{apigee_host}}"
+							],
+							"path": [
+								"swagger-petstore",
+								"store",
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getdateandtime",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apigee_host}}/hello-world",
+							"host": [
+								"{{apigee_host}}"
+							],
+							"path": [
+								"hello-world"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contentconversion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apigee_host}}/conentconversion",
+							"host": [
+								"{{apigee_host}}"
+							],
+							"path": [
+								"conentconversion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
