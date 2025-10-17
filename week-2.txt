@@ -45,10 +45,94 @@ Trafic Management:
 
 eval gcp
 request -> lb -> node 1 -> | count = 3
-                 node 2 -> |
+                 node 2 -> | 
+
+
 
 Distributed = ture 
 Synchronous = true
 
 mobile ->       | decide on the app and alow access
 webapp ->       |   3 req in a min for ever app
+
+
+Recap: 
+    1. Proxy -> 
+        APPlication [HTTP req] -> [HTTP req] [lb] Proxy [nodes] -> [HTTP req] Backend service target service
+    2. Flow req -> res [Context req res] -> Flow variables
+        1. pre  
+        2. conditional
+        3. post 
+    3. Policies
+        1. XML to JSON -> res.body 
+        2. json to xml -> res.body 
+        3. Quota -> rate limiting
+        4. Assign Message -> to manage flow variable and data 
+        5. Extract variables -> context -> flow variables
+        6. JS Policy -> 
+            alter the counter -> get -> 1, post -> 2
+
+1. calendar after 9am -> 
+2. Rollingwindow type-> 
+    6pm -> 6pm -3- 5pm -> 4-> failure
+        -> 6.15pm -> 2 ->5.15pm-> 3 allow
+3. flixi ->
+    6.20.30 sec pm ->3-> to 6.21.30 sec 
+    6.25.00 sec -> 3 -> 6.26.00 sec 
+
+4. conditional rate limit -> 
+    partner -> 10 per minute 
+    public -> 1 per minute
+
+5. proxy -> provide status of quota usage 
+    1. available.count, consumed.count 
+
+6. Fault error management: 
+    1. if any policy is encountering some condition and the flow is short circuted -> fault will be raised
+        flow -> falut rules -> mange the fault and customize the fault messages 
+
+7. spike arrest policy -> 30 request per minute -> 
+    for every 2 seconds it will allow one request.
+    should be the first policy in perflow
+
+
+Mediation Policies:
+
+1. XML to JSON 
+2. JSON to XML
+3. Assign Message
+4. Extract Variable
+5. XSLT
+6. SOAP Message Validation
+
+
+client -> get request -> proxy -> post request backend
+       -> employee -> age -> 18 -> proxy -> raise a fault
+
+       post -> proxy -> post
+                    -> get -> ServiceCallout
+
+12-AM-NewRequest
+proxy endpoint:
+    post ->  /am-newrequest?id=1
+
+two backends 
+    1. https://httpbin-777149785799.us-east1.run.app/post
+    2. https://https://jsonplaceholder.typicode.com/users
+
+Assign Message -> context [request, response 9], flow variables [request, response]
+
+13-Extract XML Payload data and validate
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <visitor>
+        <name>Vijay</name>
+        <age>18</age>
+    </visitor>
+
+
+14 - XML to HTML conversion using XSLT
+
+    xml -> elements to deifne data              -> object 
+    xsd -> schema definition for xml            -> class 
+    xslt -> design of your data use the xslt    -> ui
