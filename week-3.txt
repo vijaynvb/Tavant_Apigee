@@ -1,0 +1,98 @@
+Recap:
+
+Todays Topics:
+
+1. Conditional Flow
+2. API VerifyAPIkey
+3. Products, Developer's, APP's
+4. Concepts:
+    1. Developer Portals
+    2. JWT tokens 
+    3. OAuth Implementation
+
+1. Adiministrator level end point accessability
+/endpoints: 
+    /employees
+        Products
+            1. frontend 
+            2. mobile
+            3. iot 
+            4. batch
+
+            1. gold
+            2. silver
+            3. diamond
+        Apps: 
+            1. admin portal : apikeys
+                products
+                    frontend set the path and verb: /employees/ get  
+                    batch
+                Developers 
+                    1. vijay
+            2. customer portal : apikeys
+                products
+                    frontend
+                Developers 
+                    1. jai
+        Developers -> Frontend app[all verbs], mobile app [mobile vresion of endpoints], iot app, batch processing app send emails [get].
+            1. vijay
+            2. jai
+
+1. Devoper portal: self serviceds
+    1. products -> pre defined 
+    2. app's -> self enroll
+    3. developers -> self enroll
+
+    maps.google.com -> product -> api's 
+    vijay reddy -> delveloper -> aproval
+    ola, uber, swiggy, blinkit -> apps -> aproval 
+
+
+proxies -> 
+    proxy1
+    proxy2
+    proxy3
+
+products -> 
+    product1 -> proxy1 
+    product2 -> proxy1,proxy2 
+
+apps -> 
+[admin]    app1 -> product1 -> accesskeys. users 
+[developer]    app2 -> procuct1,product2 -> accesskeys, users, public_view 
+
+Today's:
+    JWT policies
+        Generate JWT
+        Verify JWT
+        Decode JWT.
+
+    Performance Management
+        Response Cache policy
+        Hands on exercise
+    Service callout policy
+        Hands on exercises
+    Performance management
+        Caching [ Lookup, populate, invalidate]
+
+
+JWT as Concept: encoding + encryption
+
+Client              ->                      proxy server                                                        ->     BE server 
+username                                    validate credentials and generate a token [key], pass it to client 
+password                                    /login
+
+request [token]     ->                      validates the token [key], allows request to process 
+headers Authorization: Brarer Token         /emaployees + token 
+
+Use Case: 
+    Google api's - Backend 
+        1. weather api -> 
+            input is lng and lat 
+            output is weather details as json 
+        2. place api  
+            input place
+            output of lat and lng 
+
+proxy 
+client request -> service callout [place api] -> prepare a request -> weather api [target endpoint]

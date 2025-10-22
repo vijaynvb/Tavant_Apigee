@@ -136,3 +136,60 @@ Assign Message -> context [request, response 9], flow variables [request, respon
     xml -> elements to deifne data              -> object 
     xsd -> schema definition for xml            -> class 
     xslt -> design of your data use the xslt    -> ui
+
+6. SOAP Message Validation
+7. AccessControlPolicy
+8. BasicAuth 
+9. JSONThreat
+10. KVM -> 
+11. APIVerifyKey -> [who, how, how]
+12. API Product, Developers, APP -> secrect keys
+
+SOAP -> Post 
+    1. wsdl 
+    2. SOAP Message 
+
+Client -> SOAP Message [XML - Metadata(datatype of name, get,), data(name,age,addres)] -> Server
+client [object->xml] -> soap message xml                                               -> server [xml->object]
+
+client rest [json] ->  proxy [json -> xml [validation]]     -> SOAP server xml 
+
+Access Control Policy:
+
+    CIDR -> 10.10.2.4
+
+*. BasicAuth -> 
+    login -> user name and password -> encoded with basic auth -> decode key -> username and password 
+
+    Encode -> algorithum to secure data 
+    Decode -> reverse algorithum it will decode the data 
+
+    encryption -> algorithum + key to secure the data 
+    Decryption -> algorithum + ? to decrypt
+
+JSON Threat Protection:
+
+    {
+    "hello1": "world1",
+    "hello2": "world2",
+    "hello3": "world3",
+    "hello4": "world4",
+    "hello5": "world5",
+    "hello6": "world6",
+    "hello7": "world7",
+    "hello8": "world8",
+    "hello9": "world9",
+    "hello10": "world10",
+    "hello11": "world11",
+    "hello12": "world12",
+    "hello13": "world13",
+    "hello14": "world14",
+    "hello15": "world15",
+    "hello16": "world16",
+    "hello17": "world17"
+    }
+
+
+KVM -> key value management -> 
+
+    Target -> api key -> 

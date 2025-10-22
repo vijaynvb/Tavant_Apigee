@@ -14,7 +14,7 @@ externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
 servers:
-  - url: https://6433c739582420e2316b3baa.mockapi.io/v1
+  - url: https://httpbin-777149785799.us-east1.run.app/anything
 tags:
   - name: HRMS
     description: Everything about HRMS
@@ -137,6 +137,20 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiResponse'
+    get:
+      summary: List Employees
+      description: |-
+        List of employees operation with limit
+      operationId: listEmployees
+      responses:
+        '200':
+          description: Return array of employees
+          content:
+            application/json:
+              schema: 
+                type: array
+                items:
+                  $ref: '#/components/schemas/Employee'
 components:
   schemas:
     Employee:
@@ -145,7 +159,7 @@ components:
         firstName:
           type: string
           description: Employee first name
-          example: Seshi
+          example: Vijay
         lastName:
           type: string
           example: A
